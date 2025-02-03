@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    background-color: #131313;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index:1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+.navbar-logo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2rem;
+    background-image: linear-gradient(to top, #011638 0%, #475636 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.3s ease;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar-item {
+    height: 80px;
+}
+
+.navbar-link {
+    color: white;
+    text-decoration: none;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+.navbar-link:hover {
+    background-color: #083275;
+}
+
+.navbar-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+    transition: all 0.5s ease;
+}
+
+.button {
+    color: white;
+    text-decoration: none;
+    background-color: #083275;
+    padding: 0.7rem 1.3rem;
+    border-radius: 4px;
+}
+
+@media screen and (max-width:900px) {
+
+    .nav-container {
+        padding: 0;
+    }
+
+    .navbar-logo {
+        padding-left: 1.5rem;
+    }
+
+    .navbar-menu {
+        display: grid;
+        background-color: #131313;
+        text-align: center;
+        width: 100%;
+        grid-template-columns: auto;
+        opacity: 0;
+        position: absolute;
+        top: -1000px;
+        height: 50vh;
+        transition: all 0.5s ease;
+        font-size: 1.6rem;
+        /* display: table; */
+    }
+
+    .navbar-menu.active {
+        opacity: 1;
+        top: 100%;
+        width: 100%;
+    }
+
+    .navbar-item {
+        height: 90px;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+        cursor: pointer;
+    }
+
+    .navbar-toggle .bar {
+        width: 25px;
+        background-color: white;
+        height: 3px;
+        display: block;
+        margin: 5px auto;
+    }
+
+    .navbar-link {
+        width: 100%;
+    }
+
+    .navbar-btn {
+        padding-bottom: 1rem;
+    }
+
+    .button {
+        width: 80%;
+    }
+
+
+
+
+
+
+
+
+
+
+}
